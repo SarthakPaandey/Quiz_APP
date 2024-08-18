@@ -1,0 +1,38 @@
+name: quiz_app
+description: "A new Flutter project."
+
+publish_to: 'none' # This prevents accidental publishing to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Add the necessary dependencies here:
+  http: ^0.13.3 # For making HTTP requests to the Golang backend
+  provider: ^6.0.1 # For state management
+  shared_preferences: ^2.0.8 # For storing data locally on the device
+  flutter_secure_storage: ^5.0.2 # For secure storage of sensitive data
+  cached_network_image: ^3.1.0 # For efficient image loading and caching
+  audioplayers: ^5.2.1
+  lottie: ^1.4.3
+  flutter_staggered_animations: ^1.1.1  # Added this line
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  # If you have any assets (like images), define them here:
+  assets:
+    - assets/images/
+    - assets/sounds/
+    - assets/animations/
