@@ -11,8 +11,8 @@ This Quiz App is a mobile application built using Flutter for the frontend and G
 - Interactive quiz interface
 - Multiple choice questions
 - Score tracking
-- User authentication
-- Leaderboard (to be implemented)
+- User Naming
+- Leaderboard 
 
 ## Tech Stack
 
