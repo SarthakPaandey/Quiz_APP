@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "Flutter (lib/screens/counter.dart)",
+            "type": "dart",
+            "request": "launch",
+            "cwd": "quiz_app",
+            "program": "lib/screens/counter.dart"
+        }
+    ]
+}

@@ -5,7 +5,7 @@ import '../quiz_data.dart';
 import '../services/api_service.dart';
 import '../utils/audio_manager.dart';
 import 'package:flutter/animation.dart';
-import 'dart:math' as math;
+// import 'dart:math' as math;
 
 class QuizScreen extends StatefulWidget {
   final String quizId;
@@ -309,8 +309,8 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
             onPressed: () {
               String userName = nameController.text;
               _submitScore(userName);
-              Navigator.of(context).pop();
-              Navigator.of(context).pushNamed('/leaderboard');
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                  '/leaderboard', (Route<dynamic> route) => false);
             },
             child: Text('Submit'),
           )

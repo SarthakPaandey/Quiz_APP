@@ -3,6 +3,7 @@ package main
 import (
     "github.com/gin-contrib/cors"
     "github.com/gin-gonic/gin"
+    "os"
     "quiz_backend/internal/quiz"
     "quiz_backend/internal/leaderboard"
 )
@@ -18,11 +19,19 @@ func main() {
         AllowCredentials: true,
     }))
 
+    // Set up routes
     router.GET("/quizzes", quiz.GetQuizzes)
     router.GET("/quizzes/:id", quiz.GetQuiz)
     router.POST("/submit", quiz.SubmitQuiz)
     router.POST("/leaderboard", leaderboard.SaveScore)
     router.GET("/leaderboard", leaderboard.GetLeaderboard)
 
-    router.Run(":8080")
+    // Get the port from the environment variable
+    port := os.Getenv("PORT")
+    if port == "" {
+        port = "8080" // Default to port 8080 if not set
+    }
+
+    // Run the server
+    router.Run(":" + port)
 }

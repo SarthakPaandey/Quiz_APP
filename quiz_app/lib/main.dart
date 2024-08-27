@@ -8,7 +8,7 @@ import 'package:audioplayers/audioplayers.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await AudioPlayer.global.changeLogLevel(AudioLogLevel.info);
+  AudioLogger.logLevel = AudioLogLevel.info;
   runApp(MyApp());
 }
 

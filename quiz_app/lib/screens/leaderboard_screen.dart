@@ -93,6 +93,11 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
       appBar: AppBar(
         title: Text('Leaderboard 🏆',
             style: TextStyle(fontWeight: FontWeight.bold)),
+        leading: IconButton(
+          icon: Icon(Icons.home),
+          onPressed: () => Navigator.of(context)
+              .pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false),
+        ),
         flexibleSpace: AnimatedBuilder(
           animation: _colorAnimation,
           builder: (context, child) {
